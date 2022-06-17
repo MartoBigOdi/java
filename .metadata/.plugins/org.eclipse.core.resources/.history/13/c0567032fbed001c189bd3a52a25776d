@@ -11,7 +11,7 @@ public class Final {
 
 	private static final int ONCE = 11;
 	private static int id = 10;
-	public static double total = 0;
+	double total = 0;
 
 	public static void main(String[] args) throws Exception {
 		
@@ -46,7 +46,7 @@ public class Final {
 			System.out.println("Se compro el producto id: " + id);
 			juguete.mostrar();
 			try {
-				total += juguete.getPrecio();
+				total = juguete.getPrecio();
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				

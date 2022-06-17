@@ -1,7 +1,5 @@
 package clases;
 
-import parcial_2do_main.Final;
-
 public class Jugueteria implements ContenedorInteligente <Juguete, Integer>{
 
 	private static final int ALTO_ESTANTERIA = 6;
@@ -41,7 +39,7 @@ public class Jugueteria implements ContenedorInteligente <Juguete, Integer>{
 
 	
 	public void mostrarVentas() {
-		System.out.println("El total de ventas fue de: " + Final.total);
+		System.out.println("El total de ventas fue de: " + total);
 		System.out.println("--------------------------------------------");
 		
 	}

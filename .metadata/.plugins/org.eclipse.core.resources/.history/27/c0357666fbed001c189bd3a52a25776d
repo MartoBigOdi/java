@@ -46,7 +46,7 @@ public class Final {
 			System.out.println("Se compro el producto id: " + id);
 			juguete.mostrar();
 			try {
-				total += juguete.getPrecio();
+				total = juguete.getPrecio();
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				
