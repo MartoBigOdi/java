@@ -1,0 +1,97 @@
+package excep.TDAS;
+
+import ar.edu.ort.tp1.tdas.implementaciones.ColaNodos;
+import ar.edu.ort.tp1.tdas.interfaces.Cola;
+
+public class MainColas {
+
+	public static void main(String[] args) {
+
+		Cola<String> miCola = new ColaNodos<>();
+
+		try {
+			miCola.add("Marto");
+		} catch (RuntimeException e) {
+			System.out.println("Hubo un error: " + e.getMessage());
+		}
+
+		try {
+			miCola.add("Guada");
+		} catch (RuntimeException e) {
+			System.out.println("Hubo un error: " + e.getMessage());
+		}
+
+		try {
+			miCola.add("Guille");
+		} catch (RuntimeException e) {
+			System.out.println("Hubo un error: " + e.getMessage());
+		}
+		
+		try {
+			miCola.add("Greta");
+		} catch (RuntimeException e) {
+			System.out.println("Hubo un error: " + e.getMessage());
+		}
+		
+
+		// Muestra "Marto"
+		System.out.println("Uso el .get(): " +miCola.get());
+
+		String salePrimero = miCola.remove();
+		System.out.println("Mostramos el que sacamos con el .remove(): " + salePrimero);
+
+		// Muestra "Guada porque "Marto" ya los sacamos
+		System.out.println("Uso el .get(): " +miCola.get());
+
+		System.out.println("Cola vacia: " + miCola.isEmpty());
+		
+		
+		//Repetimos el add para llenar la cola
+		try {
+			miCola.add("Pedro");
+		} catch (RuntimeException e) {
+			System.out.println("Hubo un error: " + e.getMessage());
+		}
+
+		System.out.println("Cola llena: " + miCola.isFull());
+		
+		try {
+		//Mostramos la cantidad de elementos de la cola
+		mostrarCantElementosCola(miCola);
+		} catch (RuntimeException e) {
+			System.out.println("Hubo un error al contar los elementos: " + e.getMessage());
+		}
+
+	}
+
+	
+	//Atento a usar colas con limites, porque si lo hacemos tenemos que pensar en un espacio para el centinela
+	//Si tiene limite lo tratamos con TRY y CATCH
+	private static void mostrarCantElementosCola(Cola<String> cola) throws RuntimeException{
+		
+		int cont = 0;
+		
+		//Creo centinela
+		String centinela = null;
+		//Agrego el centinela en la cola
+		cola.add(centinela);
+		
+		//Saco elemento de la cola
+		String elemento = cola.remove();
+		
+		//Recorro la cola mientras no sea el centinela
+		while(elemento != centinela) {
+			//Proceso lo que tenga que hacer
+			cont ++;
+			System.out.println("Nombre: " +elemento);
+			cola.add(elemento);
+			//Saco elemento
+			elemento = cola.remove(); //Si este es el centinela no vuelve a entrar al While.
+		}
+		System.out.println("Cantidad de elementos en la cola: " + cont);
+	}
+	
+	
+	
+
+}

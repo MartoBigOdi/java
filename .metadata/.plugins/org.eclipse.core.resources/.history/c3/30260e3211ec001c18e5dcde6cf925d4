@@ -1,0 +1,49 @@
+package ort.edu.ar.clases;
+
+import edu.ort.tp1.u5.tda.Pila;
+import edu.ort.tp1.u5.tda.nodos.PilaNodos;
+
+public class Camion {
+	
+	private static final int CAPACIDAD_MAX =3;
+	private String patente;
+	private Pila<Paquete> paquetes;
+	
+
+	public Camion(String patente) {
+		this.patente = patente;
+		this.paquetes = new PilaNodos<Paquete>(CAPACIDAD_MAX);
+	}
+
+	
+	public void agregarPaquete(Paquete paquete) throws RuntimeException {
+		//TODO 
+		paquetes.push(paquete);
+	}
+
+	
+	public double verTotal() {
+		
+		//Tenemos una Pila AUX para guardar lo elementos temporalmente	
+				Pila <Paquete> pilaAux = new PilaNodos<>();
+				double total = 0;
+
+				//Vaciamos la pila original y pasamos a PilaAux
+				while(!paquetes.isEmpty()) {
+					Paquete paquete = paquetes.pop();
+				
+					total =+ paquete.calcularPrecio();
+					pilaAux.push(paquete);
+				}
+				//Volvemos a la Pila original una vez hecho el proceso necesario.
+				while(!pilaAux.isEmpty()) {
+					//String s = pilaAux.pop();
+					//pila.push(s);
+					//System.out.println(s); //Aca mostramos por orden original / cronologico. ESTO LO PIDEN EN EL PARCIAL
+					paquetes.push(pilaAux.pop());
+				}
+
+				return total;
+	}
+
+}

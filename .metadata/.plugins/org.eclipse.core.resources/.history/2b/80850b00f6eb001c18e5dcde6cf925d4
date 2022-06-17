@@ -1,0 +1,14 @@
+package excep.TDAS;
+
+public class MainListaOrdenada {
+
+	public static void main(String[] args) {
+		
+		ListaDeZonasPorCodigo porCodigo = new ListaDeZonasPorCodigo();
+		
+		
+		
+
+	}
+
+}

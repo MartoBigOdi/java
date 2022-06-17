@@ -1,0 +1,27 @@
+package ort.edu.ar.clases;
+
+import edu.ort.tp1.u5.tda.Pila;
+import edu.ort.tp1.u5.tda.nodos.PilaNodos;
+
+public class Camion {
+	
+	private static final int CAPACIDAD_MAX =3;
+	private String patente;
+	private Pila<Paquete> paquetes;
+	
+
+	public Camion(String patente) {
+		this.patente = patente;
+		this.paquetes = new PilaNodos<Paquete>(CAPACIDAD_MAX);
+	}
+
+	
+	public void agregarPaquete(Paquete paquete) throws RuntimeException{
+	}
+
+	
+	public double verTotal() {
+
+	}
+
+}

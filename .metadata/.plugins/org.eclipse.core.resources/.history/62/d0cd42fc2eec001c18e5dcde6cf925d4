@@ -1,0 +1,25 @@
+package ort.edu.ar.clases;
+
+public class PaqueteMasa extends Paquete {
+	
+	private double largo;
+	private double ancho;
+	private double alto;
+	private double multiplicador;
+
+	public PaqueteMasa(String destino, double alto, double ancho, double largo,
+			double multiplicador) {
+		super(destino);
+		this.alto = alto;
+		this.ancho = ancho;
+		this.alto = alto;
+		this.multiplicador = multiplicador;
+		calcularPrecio();
+	}
+
+	@Override
+	public void calcularPrecio() {
+		super.setPrecio((alto * largo * ancho) * (multiplicador));
+	}
+
+}

@@ -1,0 +1,21 @@
+package ort.edu.ar.clases;
+
+import edu.ort.tp1.u5.tda.nodos.ListaOrdenadaNodos;
+
+public class ListaCamionesPorValorDescMayorGanancia extends ListaOrdenadaNodos<Double, Camion> {
+
+	@Override
+	public double compare(Camion dato1, Camion dato2) {
+		Double camion1 = dato1.verTotal();
+		Double camion2 = dato2.verTotal();
+		return camion2.compareTo(camion1);
+	}
+
+	@Override
+	public int compareByKey(Double clave, Camion elemento) {
+		// TODO Auto-generated method stub
+		Double total = elemento.verTotal();
+		return total.compareTo(clave);
+	}
+
+}

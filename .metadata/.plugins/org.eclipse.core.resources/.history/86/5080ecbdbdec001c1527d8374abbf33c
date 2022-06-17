@@ -1,0 +1,19 @@
+package ar.edu.ort.tp1.final2.clases;
+
+import edu.ort.tp1.u5.tda.nodos.ListaOrdenadaNodos;
+
+public class ListaOrdenadaBuceos extends ListaOrdenadaNodos<Integer, Buceo> {
+
+	@Override
+	public int compare(Buceo dato1, Buceo dato2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int compareByKey(Integer clave, Buceo elemento) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

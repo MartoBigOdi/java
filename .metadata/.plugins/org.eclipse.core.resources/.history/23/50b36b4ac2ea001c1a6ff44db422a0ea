@@ -1,0 +1,113 @@
+package excep.TDAS;
+/*
+ * Agregamos la dependencia de las TDAS
+ */
+
+import ar.edu.ort.tp1.tdas.implementaciones.PilaNodos;
+import ar.edu.ort.tp1.tdas.interfaces.Pila;
+
+public class MainPilas {
+
+	public static void main(String[] args) {
+		
+		Pila <String> miPila = new PilaNodos<>();
+		
+		//Instanciamos con limite 2
+		Pila <String> miPilaConLimite = new PilaNodos<>(2);
+			
+		//Muestra una Exception de RunTime porque la Pila esta vacia. Se tiene que tratar con try y catch.
+		try {
+			String s = miPila.pop();
+			System.out.println(s);
+			
+		} catch (RuntimeException e) {
+			System.out.println("Error al cargar el elemento: " + e.getMessage());
+		}
+		
+		//Agregamos elementos a la pila, se podria manejar con try y catch tambien
+		miPila.push("Marto");
+		miPila.push("Pablo");
+		miPila.push("Cali");
+		
+		//Agregamos elementos a la pila con limite
+		miPilaConLimite.push("Tini");
+		miPilaConLimite.push("Guada");
+		
+		try {
+			miPilaConLimite.push("Greta");
+		} catch(RuntimeException e) {
+			System.out.println("Error al cargar el elemento: " + e.getMessage());
+		}
+			
+		
+		//Muestra direccion en la memoria
+		System.out.println("Como se ve la pila en un syso: "+miPila);
+		
+		//Saca el ultimo elemento que agregamos
+		String s = miPila.pop();
+		System.out.println(s);
+		
+		System.out.println("Mostramos 'Pablo' porque el pop anterior borro de la Pila a 'Cali'");
+		
+		//Muestra el ultimo que agregamos
+		String s2 = miPila.peek();
+		System.out.println(s2);
+		
+		//Saca el ultimo elemento
+		String s3 = miPila.pop();
+		System.out.println(s3);
+		
+		//Probamos si esta vacia
+		System.out.println("La pila esta vacia: " + miPila.isEmpty());
+		
+		/* Probamos si esta llena, pero esto siempre da "false"
+		*  Porque no le indicamos limite al momento de crear la Pila.
+		*  Pila <String> miPila = new PilaNodos<>(NO LE INDICAMOS LIMITE); 
+		*/
+		System.out.println("La pila esta llena: " + miPila.isFull());
+		
+		/*
+		 * Da True porque le indicamos el limite y le agregamos los valores previo a 
+		 * corroborar
+		 */
+		System.out.println("La pila esta llena: " + miPilaConLimite.isFull());
+		
+		
+		String s4 = miPila.pop();
+		System.out.println(s4);
+		
+		//Probamos si esta vacia
+		System.out.println("La pila esta vacia: " + miPila.isEmpty());
+		
+		
+		mostrarCantElementosPila(miPilaConLimite);
+		
+		
+	}
+	
+	
+	//Metodo con pila aux, contador, y bandera
+	public static void mostrarCantElementosPila(Pila <String> pila) {
+			
+		Pila <String> pilaAux = new PilaNodos<>();
+		int cont = 0;
+		
+		while(!pila.isEmpty()) {
+			String s = pila.pop();
+			//Proceso lo que necesito
+			cont ++;
+			pilaAux.push(s);
+		}
+		
+		while(!pilaAux.isEmpty()) {
+			//String s = pilaAux.pop();
+			//pila.push(s);
+			pila.push(pilaAux.pop());
+		}
+		
+		System.out.println("Cantidad de elementos: " + cont);
+	}
+
+	
+	
+}

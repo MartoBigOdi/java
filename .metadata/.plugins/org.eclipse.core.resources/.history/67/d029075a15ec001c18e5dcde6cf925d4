@@ -1,0 +1,16 @@
+package ort.edu.ar.clases;
+
+public class PaquetePeso extends Paquete {
+
+	public PaquetePeso(String destino) {
+		super(destino);
+		
+	}
+
+	@Override
+	public void calcularPrecio() {
+		
+
+	}
+
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/ar/edu/ort/tp1/parcial2/tdas/implementaciones/ColaNodos.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ar/edu/ort/tp1/parcial2/tdas/implementaciones/ListaOrdenadaIterator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ar/edu/ort/tp1/parcial2/tdas/implementaciones/ListaOrdenadaNodos.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ar/edu/ort/tp1/parcial2/tdas/implementaciones/Nodo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ar/edu/ort/tp1/parcial2/tdas/implementaciones/NodoLista.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ar/edu/ort/tp1/parcial2/tdas/implementaciones/PilaNodos.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ar/edu/ort/tp1/parcial2/tdas/implementaciones/TdaNodos.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ar/edu/ort/tp1/parcial2/tdas/interfaces/Cola.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ar/edu/ort/tp1/parcial2/tdas/interfaces/ListaOrdenada.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ar/edu/ort/tp1/parcial2/tdas/interfaces/Pila.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ar/edu/ort/tp1/parcial2/tdas/interfaces/Tda.java" charset="UTF-8" />
+    <file url="PROJECT" charset="windows-1252" />
+  </component>
+</project>

@@ -1,0 +1,11 @@
+package ort.edu.ar.clases;
+
+public class PaqueteDistancia extends Paquete {
+
+	@Override
+	public void calcularPrecio() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

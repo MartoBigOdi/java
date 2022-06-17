@@ -1,0 +1,11 @@
+package ort.edu.ar.clases;
+
+public class PaquetePeso extends Paquete {
+
+	@Override
+	public void calcularPrecio() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

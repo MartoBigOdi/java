@@ -1,0 +1,57 @@
+package excep.TDAS;
+
+import java.util.Iterator;
+
+public class MainListaOrdenada {
+
+	public static void main(String[] args) {
+		
+		ListaDeZonasPorCodigo porCodigo = new ListaDeZonasPorCodigo();
+		ListaDeZonasPorNombre porNombre = new ListaDeZonasPorNombre();
+		ListaDeZonasPorSupDesc porSupDesc = new ListaDeZonasPorSupDesc();
+		
+		
+		//Lista ordenada por codigo
+		porCodigo.add(new Zona("Zona 1", 10, 10.88));
+		porCodigo.add(new Zona("Zona 2", 1, 76.45));
+		porCodigo.add(new Zona("Zona 3", 23, 33.88));
+		porCodigo.add(new Zona("Zona 4", 6, 30.60));
+		
+		System.out.println("--------------------------- Lista ordenada por Codigo -------------------------------");
+
+		for (Zona zona : porCodigo) {
+			System.out.println(zona);
+		}
+		
+		//Lista ordenada por nombre
+		porNombre.add(new Zona("Zona F", 3, 33));
+		porNombre.add(new Zona("Zona B", 3, 33));
+		porNombre.add(new Zona("Zona A", 3, 33));
+		porNombre.add(new Zona("Zona G", 3, 33));
+		
+		
+		System.out.println("--------------------------- Lista ordenada por Nombre -------------------------------");
+		
+		for (Zona zona : porNombre) {
+			System.out.println(zona);
+		}
+		
+		
+		
+		//Lista ordenada Descendente por Superficie
+		porSupDesc.add(new Zona("Zona F", 3, 33.50));
+		porSupDesc.add(new Zona("Zona B", 3, 93.05));
+		porSupDesc.add(new Zona("Zona A", 3, 108.20));
+		porSupDesc.add(new Zona("Zona G", 3, 10.40));
+		
+		
+		System.out.println("--------------------------- Lista ordenada Descendente por Superficie -------------------------------");
+		
+		for (Zona zona : porSupDesc) {
+			System.out.println(zona);
+		}
+		
+		
+	}
+
+}

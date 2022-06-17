@@ -1,0 +1,34 @@
+package ar.edu.ort.tp1.final2.clases;
+
+/**
+ * Buzo con autorizacion para bajar mas alla de los 30 metros.
+ *
+ */
+public class BuzoTecnico extends Buzo {
+
+	public BuzoTecnico(String nombre, String nacionalidad, int edad) throws Exception {
+		super(nombre, nacionalidad, edad);
+
+	}
+
+	@Override
+	public boolean habilitadoBuceoProfundo() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean habilitadoBuceoMedio() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean habilitado(int metros) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	//TODO A completar
+
+}

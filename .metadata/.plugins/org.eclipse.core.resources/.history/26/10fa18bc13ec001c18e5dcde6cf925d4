@@ -1,0 +1,16 @@
+package ort.edu.ar.clases;
+
+public class PaqueteMasa extends Paquete {
+
+	public PaqueteMasa(String destino) {
+		super(destino);
+		
+	}
+
+	@Override
+	public void calcularPrecio() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

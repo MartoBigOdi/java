@@ -1,0 +1,18 @@
+package ar.edu.ort.tp1.examen.clases;
+
+public class Pelota extends Producto {
+	
+	
+	private static final String LA_SUPERFICIE_NO_PUEDE_SER_NULA = "La superficie no puede ser nula";
+	private static final String MSG_PELOTA = "La pelota para superficie %s es de la marca %s y tiene un id %d\n";
+	
+	//TODO Completar
+	
+	public Pelota(int id, String marca) throws Exception {
+		super(id, marca);
+		// TODO Auto-generated constructor stub
+		
+	}
+	
+	
+}

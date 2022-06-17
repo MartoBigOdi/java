@@ -1,0 +1,7 @@
+package excep.TDAS;
+
+import ar.edu.ort.tp1.tdas.implementaciones.ListaOrdenadaNodos;
+
+public class ListaDeZonasPorNombre extends ListaOrdenadaNodos<String, Zona>{
+
+}

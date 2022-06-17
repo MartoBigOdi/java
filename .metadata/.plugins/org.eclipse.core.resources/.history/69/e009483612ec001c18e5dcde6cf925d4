@@ -1,0 +1,15 @@
+package ort.edu.ar.clases;
+
+public abstract class Paquete {
+	
+	private double precio;
+	private String destino;
+	
+	public Paquete(String destino) {
+		this.precio = precio;
+		this.destino = destino;
+	}
+	
+	public abstract void calcularPrecio();
+
+}

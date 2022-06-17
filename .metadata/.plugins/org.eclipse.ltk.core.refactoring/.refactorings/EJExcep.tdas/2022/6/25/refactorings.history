@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;excep&apos; to &apos;excep.TDAS&apos;&#x0D;&#x0A;- Original project: &apos;EJExcep&apos;&#x0D;&#x0A;- Original element: &apos;EJExcep/src/excep&apos;&#x0D;&#x0A;- Renamed element: &apos;EJExcep/src/excep.TDAS&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;excep&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;excep" name="excep.TDAS" qualified="false" references="true" stamp="1655071133346" textual="false" version="1.0"/>
+</session>

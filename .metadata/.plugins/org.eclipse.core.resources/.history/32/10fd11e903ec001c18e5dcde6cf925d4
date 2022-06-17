@@ -1,0 +1,23 @@
+package excep.TDAS;
+
+import ar.edu.ort.tp1.tdas.implementaciones.ListaOrdenadaNodos;
+
+public class ListaDeZonasPorSupDesc extends ListaOrdenadaNodos<Double, Zona> {
+
+	@Override
+	public int compare(Zona dato1, Zona dato2) {
+		//Restamos alreves para que nos quede DESCENDENTE
+		Double sup1 = dato1.getSuperficie();
+		Double sup2 = dato2.getSuperficie();
+		
+		return sup2.compareTo(sup1);
+	}
+
+	@Override
+	public int compareByKey(Double clave, Zona elemento) {
+		
+		
+		return 0;
+	}
+
+}

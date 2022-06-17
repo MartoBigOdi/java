@@ -1,0 +1,23 @@
+package excep.TDAS;
+
+import java.util.Iterator;
+
+public class MainListaOrdenada {
+
+	public static void main(String[] args) {
+		
+		ListaDeZonasPorCodigo porCodigo = new ListaDeZonasPorCodigo();
+		
+		porCodigo.add(new Zona("Zona 1", 10, 10.88));
+		porCodigo.add(new Zona("Zona 2", 1, 76.45));
+		porCodigo.add(new Zona("Zona 3", 23, 33.88));
+		porCodigo.add(new Zona("Zona 4", 6, 30.60));
+		
+
+		for (Zona zona : porCodigo) {
+			System.out.println(zona);
+		}
+		
+	}
+
+}

@@ -1,0 +1,49 @@
+package ort.edu.ar.clases;
+
+public class Empresa implements Detallable {
+
+	private String nombre;
+	private  Camion [] camiones;
+	
+	public Empresa(String nombre, int cantCamiones) {
+		this.nombre =nombre;
+		this.camiones = new Camion [cantCamiones];
+	}
+
+	
+	public void agregarCamion(String patente) {
+		int posLibre = obtenerPosLibre();
+		if(posLibre != -1) {
+			camiones[posLibre] = new Camion(patente);
+		} else {
+			System.out.println("NO PUEDES AGREGAR MAS CAMIONES");
+		}
+	}
+	
+
+	
+	public void agregarPaquete(Paquete paquete) {
+		
+	}
+
+	
+	
+	public void verPaquetes() {
+
+	}
+
+	
+	
+	public void camionMayorGanancias() {
+
+	}
+
+	
+	
+	@Override
+	public void verDetalle() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

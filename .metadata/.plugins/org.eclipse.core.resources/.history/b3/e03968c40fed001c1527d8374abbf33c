@@ -1,0 +1,144 @@
+package ar.edu.ort.tp1.final2.clases;
+
+import edu.ort.tp1.u5.tda.Cola;
+import edu.ort.tp1.u5.tda.ListaOrdenada;
+import edu.ort.tp1.u5.tda.Pila;
+import edu.ort.tp1.u5.tda.nodos.ColaNodos;
+import edu.ort.tp1.u5.tda.nodos.PilaNodos;
+
+public class CentroBuceoAvanzado {
+
+	private static final String BUCEO_INVALIDO = "Buceo Invalido";
+	private static final int CANTIDAD_BUCEOS = 10;
+	private String nombre;
+	private Pila <String> erroresDeReserva;
+	//Puede ir tambien ListaOrdenadaBuceosPorId en vez de ListaOrdenada
+	private ListaOrdenada <Integer, Buceo> buceosDisponibles;
+	private Cola <Buzo> buzosRegistrados;
+	private int [] cantidadBuceosPorMes;
+
+	
+	public CentroBuceoAvanzado(String nombre) {
+		
+		setNombre(nombre);
+		erroresDeReserva = new PilaNodos<>();
+		buceosDisponibles = new ListaOrdenadaBuceosPorId();
+		buzosRegistrados = new ColaNodos<>();
+		//Array con Mes.values.length
+		cantidadBuceosPorMes = new int[Mes.values().length];
+	}
+	
+
+	/**
+	 * Se registra un buceo para un determinado buzo. si ocurre un error se registra
+	 * en el log de errores, pero no se aborta la ejecucion.
+	 * 
+	 * -El buzo no puede ser nulo.
+	 * 
+	 * -El buceo cuyo id se indica, debe estar en la coleccion de buceos disponibles.
+	 * 
+	 * -El buzo debe estar habilitado para realizar el buceo seleccionado.
+	 * 
+	 * -De poder registrar al buzo, se debe agregar el buceo a su bitacora y
+	 * agregarlo a los buzos registrados, que deben estar almacenados de forma
+	 * cronologica.
+	 * 
+	 * @param buzo    Que desea bucear.
+	 * @param idBuceo Identificador del buceo que el buzo quiere hacer.
+	 */
+	public void registrarBuceo(Buzo buzo, Integer idBuceo) throws Exception{
+		
+		Buceo buceo = buscarBuceoPorID(idBuceo);
+		
+		if(buzo == null) {
+			erroresDeReserva.push("Buzo null");
+		}
+		
+		if(buceo == null) {
+			erroresDeReserva.push("Buceo null");
+		}
+		else if(!buzo.habilitado(buceo.getProfundidad())) {
+			erroresDeReserva.push("Buzo no habilitado");
+		}
+		//Agregamos el buceo a la bitacora del buzo
+		//Agregamos el Buzo al registro de buzos registrados
+		buzo.agregarABitacora(buceo);
+		this.buzosRegistrados.add(buzo);
+	}
+
+	
+	//Atento a como se agrega un elemento a un array en este caso agregamos un buceo a la cola 
+	//y sumamos el contador del mes que le enviamos
+	public void agregarBuceo(Buceo buceo, Mes mes) {
+		this.buceosDisponibles.add(buceo);
+		this.cantidadBuceosPorMes[mes.ordinal()]++;
+	}
+
+	
+	private Buceo buscarBuceoPorID(Integer idBuceo) {
+		//Como es una ListaOrdenada tenemos el search(int id) para usar.
+		return this.buceosDisponibles.search(idBuceo);
+	}
+	
+
+	public void listarErroresCronologico() {
+		System.out.println("Mostrando errores en forma cronologica");
+
+		Pila<String> pilaAux = new PilaNodos<>();
+
+		while (!erroresDeReserva.isEmpty()) {
+			String err = erroresDeReserva.pop();
+			pilaAux.push(err);
+		}
+		
+		while (!pilaAux.isEmpty()) {
+			String err = pilaAux.pop();
+			erroresDeReserva.push(err);
+			System.out.println(err); //Aca mostramos los errores (String)
+		}
+
+	}
+
+
+	public void mostrarCantidadDeBuceosPorBuzoRegistrado() {
+		
+		//De esta forma no perdemos los elementos de la Cola y la dejamos como estaba
+		Buzo centinela = null;
+		buzosRegistrados.add(centinela);
+		Buzo buzoAux = buzosRegistrados.remove();
+		
+		while(buzoAux != centinela) {
+			System.out.println("El buzo realizo cantidad de eventos: " + buzoAux.cantidadDeEventos());
+			buzosRegistrados.add(buzoAux);
+			buzoAux = buzosRegistrados.remove();
+		}
+		
+	}
+
+	
+	//Recorremos el Array de cantidadBuceosPorMes y por cada mes imprimimos el contador
+	public void mostrarCantidadDeReservasPorMes() {
+		System.out.println("------------------");
+		System.out.println("Cantidad de buceos por Mes");
+		for(int i = 0; i < this.cantidadBuceosPorMes.length; i ++) {
+			System.out.println("El mes de " +  Mes.values()[i].getNombre() + " tiene una cantidad de: " + Mes.values()[i].ordinal());
+		}
+	}
+
+
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	
+	public void mostrarBuzosRegistrados() {
+		System.out.println("Buzos registrados: " + this.buzosRegistrados);
+	}
+	
+	
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="ar.edu.ort.tp1.parcial1.clases.Asegurado"/>
+    <fullyQualifiedTypeName name="ar.edu.ort.tp1.tdas.interfaces.Cola"/>
+    <fullyQualifiedTypeName name="ar.edu.ort.tp1.tdas.implementaciones.ColaNodos"/>
+    <fullyQualifiedTypeName name="ar.edu.ort.tp1.tdas.implementaciones.ListaOrdenadaNodos"/>
+    <fullyQualifiedTypeName name="edu.ort.tp1.u5.tda.nodos.PilaNodos"/>
+    <fullyQualifiedTypeName name="edu.ort.tp1.u5.tda.Pila"/>
+    <fullyQualifiedTypeName name="edu.ort.tp1.u5.tda.Cola"/>
+    <fullyQualifiedTypeName name="edu.ort.tp1.u5.tda.nodos.ColaNodos"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+    <fullyQualifiedTypeName name="edu.ort.tp1.u5.tda.nodos.ListaOrdenadaNodos"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="ar.edu.ort.tp1.tdas.interfaces.Pila"/>
+    <fullyQualifiedTypeName name="ar.edu.ort.tp1.tdas.implementaciones.PilaNodos"/>
+</qualifiedTypeNameHistroy>

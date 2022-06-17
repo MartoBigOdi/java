@@ -1,0 +1,26 @@
+package ort.edu.ar.clases;
+
+import edu.ort.tp1.u5.tda.Pila;
+import edu.ort.tp1.u5.tda.nodos.PilaNodos;
+
+public class Camion {
+	
+	private String patente;
+	private Pila<Paquete> paquetes;
+	
+
+	public Camion(String patente) {
+		this.patente = patente;
+		this.paquetes = new PilaNodos<Paquete>(3);
+	}
+
+	
+	public void agregarPaquete(Paquete paquete) {
+	}
+
+	
+	public double verTotal() {
+
+	}
+
+}
