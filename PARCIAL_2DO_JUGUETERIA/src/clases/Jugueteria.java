@@ -12,14 +12,12 @@ public class Jugueteria implements ContenedorInteligente <Juguete, Integer>{
 	private static final int FILA_TITERE = 2;
 	private Estante[][] estanteria;
 	private ListaJuguetesPorId listaJuguetesPorId = new ListaJuguetesPorId();
-	private double total;
 	
 	
 	
 	
 	public Jugueteria() {
 		setEstanteria();
-		this.total = 0;
 	}
 	
 	
@@ -40,6 +38,7 @@ public class Jugueteria implements ContenedorInteligente <Juguete, Integer>{
 	
 
 	
+	//Final.total, sumamos el total de los juguetes en la compra.
 	public void mostrarVentas() {
 		System.out.println("El total de ventas fue de: " + Final.total);
 		System.out.println("--------------------------------------------");
@@ -51,6 +50,17 @@ public class Jugueteria implements ContenedorInteligente <Juguete, Integer>{
 	
 	@Override
 	public void guardar(Juguete juguete) {
+		JugueteFila(juguete);
+		listaJuguetesPorId.add(juguete);
+	}
+
+
+	
+	/*FIXME veo código duplicado. no se podría mejorar?
+	 * De esta manera profe creo que podria dejarlo un poco mejor
+	 * Mejoramos el guardar()
+	*/	
+	private void JugueteFila(Juguete juguete) {
 		if (juguete instanceof Peluche) {
 			this.depositarJuguetePorFila(juguete, FILA_PELUCHE);
 		} else if (juguete instanceof Pelota) {
@@ -58,9 +68,6 @@ public class Jugueteria implements ContenedorInteligente <Juguete, Integer>{
 		} else {
 			this.depositarJuguetePorFila(juguete, FILA_TITERE);
 		}
-
-		listaJuguetesPorId.add(juguete);
-		
 	}
 
 	
@@ -87,9 +94,10 @@ public class Jugueteria implements ContenedorInteligente <Juguete, Integer>{
 
 	
 	
-	
+//	FIXME debe usar el metodo exists()
 	public boolean existeJuguete(int idJuguete) {
-		return listaJuguetesPorId.search(idJuguete) != null;
+		return listaJuguetesPorId.exists(idJuguete);
+		//return listaJuguetesPorId.search(idJuguete) != null;
 	}
 
 
@@ -102,8 +110,11 @@ public class Jugueteria implements ContenedorInteligente <Juguete, Integer>{
 		int fila = 0;
 		int columna = 0;
 
+		//FIXME porque no intenta sacar directamente en vez de llamar 2 veces a la lista?
+		//Hecho, me quedo ese defecto de verlo como una matriz y que el interno estabaa de mas no lo vi. 
+		//Gracias.
 		if(this.existeJuguete(id)) {
-			while (fila < estanteria.length && jugueteEncontrado == null) {
+			//while (fila < estanteria.length && jugueteEncontrado == null) {
 				while (columna < estanteria[fila].length && jugueteEncontrado == null) {
 					jugueteEncontrado = estanteria[fila][columna].recuperarPorId(id);
 					columna++;
@@ -115,7 +126,7 @@ public class Jugueteria implements ContenedorInteligente <Juguete, Integer>{
 			if (jugueteEncontrado != null) {
 				listaJuguetesPorId.removeByKey(jugueteEncontrado.getId());
 			}
-		}
+		//}
 
 		return jugueteEncontrado;
 	}

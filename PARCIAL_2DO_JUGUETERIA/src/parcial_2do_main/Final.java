@@ -28,6 +28,7 @@ public class Final {
 
 	}
 
+	
 	private static void procesarCompras(Jugueteria jugueteria) {
 		System.out.println("--------------------------------------------");
 		System.out.println("Se comienza a comprar juguetes");
@@ -40,6 +41,7 @@ public class Final {
 		System.out.println("--------------------------------------------");
 	}
 
+	
 	private static void comprar(Jugueteria jugueteria, int id) {
 		Juguete juguete = jugueteria.recuperarPorId(id);
 		if (juguete != null) {
@@ -56,6 +58,7 @@ public class Final {
 		}		
 	}
 
+	
 	private static void guardarJuguetes(Jugueteria jugueteria)  {
 		System.out.println("Guardando juguetes en la jugueteria");
 		System.out.println("--------------------------------------------");
@@ -78,6 +81,7 @@ public class Final {
 		System.out.println("Fin del guardado");
 		System.out.println("--------------------------------------------");
 	}
+	
 
 	private static void guardarPeluche(Jugueteria deposito, int id, String marca, String modelo, float precio) {
 		try {
@@ -89,6 +93,7 @@ public class Final {
 		}
 	
 	}
+	
 
 	private static void guardarTitere(Jugueteria deposito, int id, String marca, int tamanio, float precio)  {
 		try {
@@ -101,6 +106,7 @@ public class Final {
 	
 	}
 
+	
 	private static void guardarPelota(Jugueteria deposito, int id, String marca, TipoDePelota superficie, float precio)  {
 		try {
 		Juguete p = new Pelota(id, marca, superficie, precio);

@@ -1,2 +1,3 @@
 1655422299016	Rename type 'ListaJuguetePorId'
 1655433577721	Rename type 'Parcial2'
+1655525027306	Extract method 'depositarPorTipoJugueteFila'

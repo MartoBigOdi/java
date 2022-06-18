@@ -28,7 +28,7 @@ public class Pelota extends Juguete implements Mostrable{
 
 	@Override
 	public void mostrar() {
-		System.out.printf(MSG_PELOTA, this.getPrecio(), this.getTipoPelota(), this.getMarca() ,this.getId());
+		System.out.printf(MSG_PELOTA, this.getPrecio(), this.getTipoPelota().getDescripcion(), this.getMarca() ,this.getId());
 		
 	}
 	

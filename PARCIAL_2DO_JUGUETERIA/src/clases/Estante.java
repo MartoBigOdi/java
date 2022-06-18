@@ -16,7 +16,10 @@ public class Estante implements ContenedorInteligente <Juguete, Integer>{
 	//Guardamos el elemento
 	@Override
 	public void guardar(Juguete elemento) {
+		//FIXME no cumple lo pedido de lanzar excepcion.
+	
 		this.juguetes.push(elemento);
+		
 	}
 
 	

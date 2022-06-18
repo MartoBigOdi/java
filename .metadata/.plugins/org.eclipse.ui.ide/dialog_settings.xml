@@ -8,12 +8,12 @@
 			<item value=""/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
-			<item value="C:\Users\marti\OneDrive\Escritorio\Null\Facu\TP1\workspaceTP1\TP1-2022-C1-Parcial2-VasconceloMartin2.zip"/>
 			<item value="C:\Users\marti\OneDrive\Escritorio\Null\Facu\TP1\workspaceTP1\TP1-2022-C1-Parcial2-VasconceloMartin.zip"/>
 			<item value="C:\Users\marti\OneDrive\Escritorio\Null\Facu\TP1\workspaceTP1\TP1-2021-C1-Rec1-TMultiDepo_completo.zip"/>
+			<item value="C:\Users\marti\OneDrive\Escritorio\Null\Facu\TP1\workspaceTP1\TP1-2021-C1-Rec1-TMultiDepo_incompleto.zip"/>
+			<item value="C:\Users\marti\OneDrive\Escritorio\Null\Facu\TP1\workspaceTP1\TP1-2022-C1-Parcial2-VasconceloMartin2.zip"/>
 			<item value="C:\Users\marti\OneDrive\Escritorio\Null\Facu\TP1\workspaceTP1\TP1-2022-C1-Parcial2-ApellidoNombre.zip"/>
 			<item value="C:\Users\marti\OneDrive\Escritorio\Null\Facu\TP1\workspaceTP1\Envios_T1_INCOMPLETO.zip"/>
-			<item value="C:\Users\marti\OneDrive\Escritorio\Null\Facu\TP1\workspaceTP1\TP1-2021-C1-Rec1-TMultiDepo_incompleto.zip"/>
 			<item value="C:\Users\marti\OneDrive\Escritorio\Null\Facu\TP1\workspaceTP1\TP1_2019_C1_Parcial2.zip"/>
 			<item value="C:\Users\marti\OneDrive\Escritorio\Null\Facu\TP1\workspaceTP1\TProg1-TP6-incompleto.zip"/>
 			<item value="C:\Users\marti\OneDrive\Escritorio\Null\Facu\TP1\workspaceTP1\TPROG1-TDAS.zip"/>
@@ -43,5 +43,10 @@
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.jdt.ui.java"/>
 		</list>
+	</section>
+	<section name="ResourceNavigator">
+		<item key="ResourceViewer.STORE_SORT_TYPE" value="1"/>
+		<item key="ResourceWorkingSetFilter.STORE_WORKING_SET" value="Aggregate for window 1649802828221"/>
+		<item key="LINK_NAVIGATOR_TO_EDITOR" value="true"/>
 	</section>
 </section>
