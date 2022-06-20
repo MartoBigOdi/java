@@ -87,7 +87,7 @@ public class Final {
 		try {
 		Juguete p = new Peluche(id, marca, modelo, precio);
 		deposito.guardar(p);
-		System.out.println("Peluche depositado id: "  + id);
+		System.out.println("Peluche " + p.getMarca() + " depositado id: "  + id);
 		} catch (RuntimeException e) {
 			System.out.println(e.getMessage());
 		}
@@ -99,7 +99,7 @@ public class Final {
 		try {
 		Juguete p = new Titere(id, marca, tamanio, precio);
 		deposito.guardar(p);
-		System.out.println("Titere depositado id: "  + id);
+		System.out.println("Titere " + p.getMarca() + " depositado id: "  + id);
 		} catch (RuntimeException e) {
 			System.out.println(e.getMessage());
 		}
@@ -111,7 +111,7 @@ public class Final {
 		try {
 		Juguete p = new Pelota(id, marca, superficie, precio);
 		deposito.guardar(p);
-		System.out.println("Pelota depositada id: "  + id);
+		System.out.println("Pelota " + p.getMarca() + " depositada id: "  + id);
 		} catch (RuntimeException e) {
 			System.out.println(e.getMessage());
 		}
